@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewJs</title>
+</head>
+<body>
+    <p>i got tired of seeing ads in modrinth</p>
+    <p>and it wont lemme close out of it using window.close()</p>
+    <p>so you can execute code using this textbox:</p>
+    <textarea id="codeInput" rows="10" cols="50"></textarea>
+    <br>
+    <button onclick="executeCode()">Execute Code</button>
+    <script>
+        function executeCode() {
+            const code = document.getElementById("codeInput").value;
+            try {
+                eval(code);
+            } catch (error) {
+                console.error("Error executing code:", error);
+            }
+        }
+    </script>
+</body>
+</html>
